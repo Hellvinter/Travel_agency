@@ -130,6 +130,7 @@ ul {
 	height: 100%;
 	background: #ddd;
 	padding-bottom: 2rem;
+	overflow: hidden; //try another fix
 	.title {
 		color: rgba(43,43,43,.7);
 	}
@@ -267,11 +268,12 @@ ul {
 
 //styling testimonials section
 .testimonials {
-	height: 80vh;
+	height: 90vh;
 	background: #ddd;
+	overflow: hidden;
 	.title {
 		color: rgba(43,43,43,.7);
-		margin-bottom: 6rem;
+		margin-bottom: 2rem;
 	}
 	.testimonials_wrapper {
 		display: flex;
@@ -287,11 +289,11 @@ ul {
 //styling info section
 
 .info {
-	height: 50vh;
+	height: 50%;
 	background: rgb(43,43,43) url('https://res.cloudinary.com/hellvinter/image/upload/v1549974321/Portfolio/Travel_agency/bg/landscape-2.png') center no-repeat;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
-	        background-size: cover;
+	        background-size: cover;       
 	.title{
 		color: rgba(255,255,255,.9)
 	}
@@ -335,7 +337,7 @@ ul {
 }
 //styling footer
 .footer {
-	height: 20vh;
+	height: 20%;
 	background: rgb(43,43,43);
 }
 
@@ -381,11 +383,9 @@ ul {
 
 
 /////////////STYLING TOURS PAGES//////////////
-
-
 .container {
 	position: relative;
-	height: 100vh;
+	height: 100%;
 	background: rgb(43,43,43);
 	.container_text {
 	font-size: 20px;
@@ -394,7 +394,6 @@ ul {
 }
 
 .container_img {
-	
 	width: 960px;
 	height: 720px;
 	float: left;
