@@ -268,16 +268,16 @@ ul {
 
 //styling testimonials section
 .testimonials {
-	height: 90vh;
+	height: 75vh;
 	background: #ddd;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	overflow: hidden;
 	.title {
 		color: rgba(43,43,43,.7);
-		margin-bottom: 2rem;
-	}
-	.testimonials_wrapper {
-		display: flex;
-		justify-content: center;
+		margin-top: -8rem;
 	}
 }
 
@@ -385,7 +385,7 @@ ul {
 /////////////STYLING TOURS PAGES//////////////
 .container {
 	position: relative;
-	height: 100%;
+	height: 100vh;
 	background: rgb(43,43,43);
 	.container_text {
 	font-size: 20px;

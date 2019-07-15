@@ -5,6 +5,7 @@ img {
   max-width: 100%; }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
@@ -44,8 +45,14 @@ ul {
   opacity: .85; }
 
 .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: base-line;
+  -ms-flex-align: base-line;
   align-items: base-line;
   background-color: rgba(45, 45, 45, 0.8);
   position: fixed;
@@ -62,7 +69,11 @@ ul {
     padding: 1rem 3rem; }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-right: 3rem; }
 
@@ -83,6 +94,8 @@ ul {
   position: absolute;
   top: 25px;
   width: 0%;
+  -webkit-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms; }
 
 .nav-link:hover::after {
@@ -90,6 +103,8 @@ ul {
 
 .main-title {
   text-align: center;
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
   transform: translateY(200%);
   color: #FFF; }
 
@@ -106,17 +121,25 @@ ul {
     color: rgba(43, 43, 43, 0.7); }
 
 .row-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around; }
 
 .row-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly; }
 
 .card {
   background: rgba(43, 43, 43, 0.75);
   border: 2px solid rgba(200, 43, 43, 0.9);
   border-radius: 10% 0%;
+  -webkit-box-shadow: 1px 0px 10px #000;
   box-shadow: 1px 0px 10px #000;
   width: 11rem; }
   .card_img {
@@ -144,31 +167,47 @@ ul {
   background: #2b2b2b; }
 
 #item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
   grid-area: first;
   background: #ddd url("https://res.cloudinary.com/hellvinter/image/upload/v1549636388/Portfolio/Travel_agency/tours/portugal-839817_960_720.png") center no-repeat;
   background-size: cover; }
 
 #item-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
   grid-area: second;
   background: #ddd url("https://res.cloudinary.com/hellvinter/image/upload/v1549636386/Portfolio/Travel_agency/tours/yellow-mountains-532857_960_720.png") center no-repeat;
   background-size: cover; }
 
 #item-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
   grid-area: third;
   background: #ddd url("https://res.cloudinary.com/hellvinter/image/upload/v1549636391/Portfolio/Travel_agency/tours/torii-1886975_960_720.png") center no-repeat;
   background-size: cover; }
 
 #item-4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
   grid-area: fourth;
   background: #ddd url("https://res.cloudinary.com/hellvinter/image/upload/v1549636388/Portfolio/Travel_agency/tours/birma.png") center no-repeat;
   background-size: cover; }
 
 #item-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
   grid-area: fifth;
   background: #ddd url("https://res.cloudinary.com/hellvinter/image/upload/v1552127903/Portfolio/Travel_agency/tours/neuschwanstein-castle.png") right center no-repeat;
   background-size: cover; }
 
 #item-6 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
   grid-area: sixth;
   background: #ddd url("https://res.cloudinary.com/hellvinter/image/upload/v1549636385/Portfolio/Travel_agency/tours/architecture-1868265_960_720.png") center no-repeat;
   background-size: cover; }
@@ -176,17 +215,27 @@ ul {
 .grid-container {
   max-width: 1200px;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 20% 10px [col-start] 10px 20% 10px [col-start] 10px 20% 10px [col-start] 10px 20% 10px [col-start];
   grid-template-columns: repeat(4, 20% [col-start]);
+  -ms-grid-rows: 20vh 10px 15vh 10px 25vh;
   grid-template-rows: 20vh 15vh 25vh;
   grid-template-areas: " first second third fourth" " first second third fifth" " sixth sixth sixth sixth";
   grid-gap: 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-line-pack: center;
   align-content: center; }
 
 .grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .grid-item:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1); }
     .grid-item:hover .tours_name {
       opacity: 1; }
@@ -198,15 +247,25 @@ ul {
   opacity: 0; }
 
 .testimonials {
-  height: 90vh;
+  height: 75vh;
   background: #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden; }
   .testimonials .title {
     color: rgba(43, 43, 43, 0.7);
-    margin-bottom: 2rem; }
-  .testimonials .testimonials_wrapper {
-    display: flex;
-    justify-content: center; }
+    margin-top: -8rem; }
 
 .testimonials_video {
   width: 45.625rem;
@@ -224,9 +283,18 @@ ul {
 .receive_info {
   height: 25%;
   margin-top: 3.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; }
 
 .receive_info__input {
@@ -249,6 +317,8 @@ ul {
   .btn:hover {
     cursor: pointer; }
   .btn:active {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
     transform: scale(0.95);
     border: 1px solid #42aacf; }
 
@@ -258,15 +328,28 @@ ul {
 
 .row {
   heigth: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start; }
 
 .wrapper {
   height: 100%;
   padding: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .contact {
@@ -277,10 +360,15 @@ ul {
   margin-top: 2rem; }
 
 .copyright {
+  -ms-flex-item-align: end;
   align-self: flex-end; }
 
 .media {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .media-item {
@@ -288,7 +376,7 @@ ul {
 
 .container {
   position: relative;
-  height: 100%;
+  height: 100vh;
   background: #2b2b2b; }
   .container .container_text {
     font-size: 20px;
@@ -324,5 +412,7 @@ ul {
 #container_img-6 {
   background: #2b2b2b url("https://res.cloudinary.com/hellvinter/image/upload/v1549636385/Portfolio/Travel_agency/tours/architecture-1868265_960_720.png") center no-repeat;
   background-size: cover; }
+
+
 
 /*# sourceMappingURL=style.css.map */
